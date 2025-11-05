@@ -12,11 +12,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --elegant-gold: #d4af37;
-      --rich-brown: #3e2723;
-      --cream: #faf8f3;
-      --soft-gray: #6d6d6d;
-      --accent-copper: #b87333;
+      --elegant-gold: #d9a362;
+      --rich-brown: #5d4037;
+      --cream: #f5ebe0;
+      --soft-gray: #8b7355;
+      --accent-copper: #c89968;
+      --dark-chocolate: #3d2817;
+      --light-cream: #fdf8f3;
+      --medium-brown: #9c7a5c;
     }
     
     * {
@@ -26,7 +29,7 @@
     }
     
     body {
-      background: linear-gradient(to bottom, #faf8f3 0%, #f5f1e8 100%);
+      background: linear-gradient(to bottom, #f5ebe0 0%, #e8dcc8 100%);
       min-height: 100vh;
       font-family: 'Lato', sans-serif;
       color: var(--rich-brown);
@@ -57,9 +60,8 @@
       animation: fadeInUp 1s ease-out;
     }
 
-    /* Header Elegante */
     header {
-      background: linear-gradient(135deg, #3e2723 0%, #5d4037 50%, #3e2723 100%);
+      background: linear-gradient(135deg, #5d4037 0%, #9c7a5c 50%, #5d4037 100%);
       border-bottom: 2px solid var(--elegant-gold);
       box-shadow: 0 8px 32px rgba(0,0,0,0.2);
       position: relative;
@@ -73,7 +75,7 @@
       left: -100%;
       width: 200%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+      background: linear-gradient(90deg, transparent, rgba(217, 163, 98, 0.1), transparent);
       animation: shimmer 3s infinite;
     }
 
@@ -85,7 +87,7 @@
     }
 
     header small {
-      color: #e0d4c3;
+      color: #e8dcc8;
       font-weight: 300;
       letter-spacing: 1px;
     }
@@ -117,14 +119,13 @@
       color: var(--rich-brown);
       border-color: var(--elegant-gold);
       transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(212, 175, 55, 0.4);
+      box-shadow: 0 4px 16px rgba(217, 163, 98, 0.4);
     }
 
     .btn-header:hover::before {
       left: 0;
     }
 
-    /* Cards Elegantes */
     .card {
       border: none;
       border-radius: 2px;
@@ -155,7 +156,6 @@
       height: 100%;
     }
 
-    /* Tabla Elegante */
     .table-responsive {
       background: white;
       border-radius: 2px;
@@ -165,7 +165,7 @@
     }
 
     .table thead {
-      background: linear-gradient(135deg, var(--rich-brown) 0%, #5d4037 100%);
+      background: linear-gradient(135deg, var(--rich-brown) 0%, #9c7a5c 100%);
       color: var(--elegant-gold);
     }
 
@@ -185,7 +185,7 @@
     }
 
     .table tbody tr:hover {
-      background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.05), transparent);
+      background: linear-gradient(to right, transparent, rgba(217, 163, 98, 0.05), transparent);
       transform: scale(1.005);
     }
 
@@ -195,7 +195,6 @@
       font-weight: 400;
     }
 
-    /* Botones Elegantes */
     .btn {
       border-radius: 2px;
       padding: 12px 32px;
@@ -240,12 +239,12 @@
     .btn-warning {
       background: linear-gradient(135deg, var(--elegant-gold) 0%, var(--accent-copper) 100%);
       color: white;
-      box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);
+      box-shadow: 0 4px 16px rgba(217, 163, 98, 0.3);
     }
 
     .btn-warning:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.5);
+      box-shadow: 0 8px 24px rgba(217, 163, 98, 0.5);
     }
 
     .btn-danger {
@@ -259,10 +258,9 @@
     }
 
     .btn-secondary {
-      background: linear-gradient(135deg, #546e7a 0%, #607d8b 100%);
+      background: linear-gradient(135deg, #8b7355 0%, #9c7a5c 100%);
     }
 
-    /* Modal Elegante */
     .modal-content {
       border: none;
       border-radius: 0;
@@ -272,7 +270,7 @@
     }
 
     .modal-header {
-      background: linear-gradient(135deg, var(--rich-brown) 0%, #5d4037 100%);
+      background: linear-gradient(135deg, var(--rich-brown) 0%, #9c7a5c 100%);
       color: var(--elegant-gold);
       padding: 28px 32px;
       border: none;
@@ -306,7 +304,7 @@
 
     .form-control:focus, .form-select:focus {
       border-bottom-color: var(--elegant-gold);
-      box-shadow: 0 2px 0 0 rgba(212, 175, 55, 0.2);
+      box-shadow: 0 2px 0 0 rgba(217, 163, 98, 0.2);
       background: transparent;
     }
 
@@ -319,7 +317,6 @@
       letter-spacing: 1.5px;
     }
 
-    /* Section Titles Elegantes */
     .section-title {
       background: white;
       padding: 30px;
@@ -343,7 +340,6 @@
       letter-spacing: 0.5px;
     }
 
-    /* Gallery Cards Elegantes */
     .gallery-card {
       border-radius: 0;
       overflow: hidden;
@@ -362,7 +358,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(180deg, transparent 0%, rgba(62,39,35,0.9) 100%);
+      background: linear-gradient(180deg, transparent 0%, rgba(93,64,55,0.9) 100%);
       transition: all 0.5s ease;
     }
 
@@ -378,7 +374,7 @@
     }
 
     .gallery-card:hover::before {
-      background: linear-gradient(180deg, rgba(212,175,55,0.2) 0%, rgba(62,39,35,0.95) 100%);
+      background: linear-gradient(180deg, rgba(217,163,98,0.2) 0%, rgba(93,64,55,0.95) 100%);
     }
 
     .gallery-card:hover::after {
@@ -406,21 +402,19 @@
       letter-spacing: 1px;
     }
 
-    /* Footer Elegante */
     footer {
-      background: linear-gradient(135deg, var(--rich-brown) 0%, #5d4037 100%);
+      background: linear-gradient(135deg, var(--rich-brown) 0%, #9c7a5c 100%);
       margin-top: 60px;
       box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
       border-top: 2px solid var(--elegant-gold);
     }
 
     footer p, footer small {
-      color: #e0d4c3 !important;
+      color: #e8dcc8 !important;
       font-weight: 300;
       letter-spacing: 0.5px;
     }
 
-    /* Badge Elegante */
     .badge {
       border-radius: 10px;
       font-size: 0.7rem;
@@ -428,7 +422,6 @@
       font-weight: 600;
     }
 
-    /* Imagen de producto */
     .product-img {
       width: 70px;
       height: 70px;
@@ -438,10 +431,9 @@
       border: 2px solid var(--cream);
     }
 
-    /* Dropdown Elegante */
     .dropdown-menu {
       border-radius: 0;
-      border: 1px solid rgba(212, 175, 55, 0.2);
+      border: 1px solid rgba(217, 163, 98, 0.2);
       box-shadow: 0 8px 32px rgba(0,0,0,0.15);
       padding: 8px;
       background: white;
@@ -456,12 +448,11 @@
     }
 
     .dropdown-item:hover {
-      background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.1));
+      background: linear-gradient(to right, transparent, rgba(217, 163, 98, 0.1));
       color: var(--rich-brown);
       padding-left: 24px;
     }
 
-    /* Auth overlay elegante */
     #authOverlay .card {
       border-radius: 0;
       border: none;
@@ -497,7 +488,6 @@
       letter-spacing: 1px;
     }
 
-    /* Divider elegante */
     hr {
       border: none;
       height: 1px;
@@ -505,7 +495,6 @@
       margin: 30px 0;
     }
 
-    /* Alert elegante */
     .alert {
       border-radius: 0;
       border: none;
@@ -526,7 +515,6 @@
       color: #2e7d32;
     }
 
-    /* Scroll elegante */
     ::-webkit-scrollbar {
       width: 10px;
     }
