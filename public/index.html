@@ -562,81 +562,77 @@
     </div>
   </header>
   
-  <!-- Overlay Login/Register con video de fondo -->
-  <div id="authOverlay" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; z-index: 99999; overflow: hidden;">
-
+  <div id="authOverlay" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; z-index: 99999; overflow: hidden; background: linear-gradient(135deg, #5d4037 0%, #9c7a5c 25%, #c89968 50%, #9c7a5c 75%, #5d4037 100%);">
+      
     <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(circle at 20% 50%, rgba(217, 163, 98, 0.2) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(245, 235, 224, 0.15) 0%, transparent 50%); z-index: 2;"></div>
 
-      <!-- Contenedor del formulario -->
-      <div class="container" style="position: relative; z-index: 100;">
-        <div class="row justify-content-center">
-          <div class="col-12 col-sm-10 col-md-8 col-lg-5 col-xl-4">
-            
-            <div class="card shadow-lg" style="background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); animation: fadeInUp 0.8s ease;">
-              <div class="card-body">
-                
-                <div class="text-center mb-4">
-                  <h2 id="authTitle" class="fw-bold">CREAR CUENTA</h2>
-                  <p class="text-muted" style="font-weight: 300; letter-spacing: 1px;">Únete a nuestra comunidad panaderil</p>
-                </div>
-
-                <!-- Formulario de registro -->
-                <form id="formRegister">
-                  <input type="hidden" name="rol" id="rolInput" value="cliente">
-                  <div class="mb-4">
-                    <label class="form-label fw-semibold"><i class="bi bi-person"></i> Nombre</label>
-                    <input name="nombre" id="regNombre" class="form-control" placeholder="Tu nombre completo" required />
-                  </div>
-                  <div class="mb-4">
-                    <label class="form-label fw-semibold"><i class="bi bi-envelope"></i> Email</label>
-                    <input name="email" id="regEmail" type="email" class="form-control" placeholder="correo@ejemplo.com" required />
-                  </div>
-                  <div class="mb-4">
-                    <label class="form-label fw-semibold"><i class="bi bi-lock"></i> Contraseña</label>
-                    <input name="password" id="regPassword" type="password" class="form-control" placeholder="••••••••" required />
-                  </div>
-                  <button class="btn btn-warning w-100 mb-4" type="submit">
-                    <i class="bi bi-check-circle"></i> Registrarme
-                  </button>
-                  <div class="text-center">
-                    <a href="#" id="switchToLogin" class="text-decoration-none">
-                      ¿Ya tienes cuenta? Iniciar sesión
-                    </a>
-                  </div>
-                  <div id="authError" class="alert alert-danger mt-3 d-none"></div>
-                </form>
-
-                <!-- Formulario de login -->
-                <form id="formLogin" class="d-none">
-                  <div class="mb-4">
-                    <label class="form-label fw-semibold"><i class="bi bi-envelope"></i> Email</label>
-                    <input id="logEmail" type="email" class="form-control" placeholder="correo@ejemplo.com" required />
-                  </div>
-                  <div class="mb-4">
-                    <label class="form-label fw-semibold"><i class="bi bi-lock"></i> Contraseña</label>
-                    <input id="logPassword" type="password" class="form-control" placeholder="••••••••" required />
-                  </div>
-                  <button class="btn btn-success w-100 mb-4" type="submit">
-                    <i class="bi bi-box-arrow-in-right"></i> Iniciar sesión
-                  </button>
-                  <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
-                    <a href="#" id="switchToRegister" class="text-decoration-none">
-                      Crear cuenta
-                    </a>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalReset" class="text-decoration-none">
-                      ¿Olvidaste tu contraseña?
-                    </a>
-                  </div>
-                  <div id="loginError" class="alert alert-danger mt-3 d-none"></div>
-                </form>
-
+    <div class="container" style="position: relative; z-index: 100;">
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-8 col-lg-5 col-xl-4">
+          
+          <div class="card shadow-lg" style="background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); animation: fadeInUp 0.8s ease;">
+            <div class="card-body">
+              
+              <div class="text-center mb-4">
+                <h2 id="authTitle" class="fw-bold">CREAR CUENTA</h2>
+                <p class="text-muted" style="font-weight: 300; letter-spacing: 1px;">Únete a nuestra comunidad panaderil</p>
               </div>
-            </div>
 
+              <form id="formRegister">
+                <input type="hidden" name="rol" id="rolInput" value="cliente">
+                <div class="mb-4">
+                  <label class="form-label fw-semibold"><i class="bi bi-person"></i> Nombre</label>
+                  <input name="nombre" id="regNombre" class="form-control" placeholder="Tu nombre completo" required />
+                </div>
+                <div class="mb-4">
+                  <label class="form-label fw-semibold"><i class="bi bi-envelope"></i> Email</label>
+                  <input name="email" id="regEmail" type="email" class="form-control" placeholder="correo@ejemplo.com" required />
+                </div>
+                <div class="mb-4">
+                  <label class="form-label fw-semibold"><i class="bi bi-lock"></i> Contraseña</label>
+                  <input name="password" id="regPassword" type="password" class="form-control" placeholder="••••••••" required />
+                </div>
+                <button class="btn btn-warning w-100 mb-4" type="submit">
+                  <i class="bi bi-check-circle"></i> Registrarme
+                </button>
+                <div class="text-center">
+                  <a href="#" id="switchToLogin" class="text-decoration-none">
+                    ¿Ya tienes cuenta? Iniciar sesión
+                  </a>
+                </div>
+                <div id="authError" class="alert alert-danger mt-3 d-none"></div>
+              </form>
+
+              <form id="formLogin" class="d-none">
+                <div class="mb-4">
+                  <label class="form-label fw-semibold"><i class="bi bi-envelope"></i> Email</label>
+                  <input id="logEmail" type="email" class="form-control" placeholder="correo@ejemplo.com" required />
+                </div>
+                <div class="mb-4">
+                  <label class="form-label fw-semibold"><i class="bi bi-lock"></i> Contraseña</label>
+                  <input id="logPassword" type="password" class="form-control" placeholder="••••••••" required />
+                </div>
+                <button class="btn btn-success w-100 mb-4" type="submit">
+                  <i class="bi bi-box-arrow-in-right"></i> Iniciar sesión
+                </button>
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <a href="#" id="switchToRegister" class="text-decoration-none">
+                    Crear cuenta
+                  </a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#modalReset" class="text-decoration-none">
+                    ¿Olvidaste tu contraseña?
+                  </a>
+                </div>
+                <div id="loginError" class="alert alert-danger mt-3 d-none"></div>
+              </form>
+
+            </div>
           </div>
+
         </div>
       </div>
     </div>
+  </div>
 
   <main class="container animate-fade-in" id="mainApp" style="display:none;">
     <div class="section-title">
@@ -677,7 +673,6 @@
     <div class="row g-4 animate-fade-in" id="galeria"></div>
   </main>
 
-  <!-- Modal producto -->
   <div class="modal fade" id="modalProducto" tabindex="-1">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
@@ -721,7 +716,6 @@
     </div>
   </div>
 
-  <!-- Modal carrito -->
   <div class="modal fade" id="modalCarrito" tabindex="-1">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
@@ -731,7 +725,7 @@
         </div>
         <div class="modal-body p-4">
           <div id="carritoItems"></div>
-          <div class="text-end mt-4 p-4 rounded" style="background: linear-gradient(135deg, #faf8f3 0%, #f5f1e8 100%); border-left: 4px solid var(--elegant-gold);">
+          <div class="text-end mt-4 p-4 rounded" style="background: linear-gradient(135deg, #f5ebe0 0%, #e8dcc8 100%); border-left: 4px solid var(--elegant-gold);">
             <h4 class="mb-0 fw-bold" style="color: var(--rich-brown); letter-spacing: 1px;">TOTAL: <span style="color: var(--elegant-gold);">$<span id="carritoTotal">0.00</span></span></h4>
           </div>
         </div>
@@ -743,15 +737,14 @@
     </div>
   </div>
 
-  <!-- Modal Conócenos -->
   <div class="modal fade" id="modalConocenos" tabindex="-1">
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content border-0 shadow-lg" style="background: linear-gradient(135deg, #fff8e1 0%, #ffe0b2 100%);">
-        <div class="modal-header border-0 pb-0 position-relative" style="background: linear-gradient(135deg, #3e2723 0%, #5d4037 100%); min-height: 220px;">
-          <div class="position-absolute top-0 start-0 w-100 h-100" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 120%22><path d=%22M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z%22 fill=%22%23d4af37%22 opacity=%220.2%22/></svg>'); background-size: cover; opacity: 0.5;"></div>
+      <div class="modal-content border-0 shadow-lg" style="background: linear-gradient(135deg, #fdf8f3 0%, #f5ebe0 100%);">
+        <div class="modal-header border-0 pb-0 position-relative" style="background: linear-gradient(135deg, #5d4037 0%, #9c7a5c 100%); min-height: 220px;">
+          <div class="position-absolute top-0 start-0 w-100 h-100" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 120%22><path d=%22M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z%22 fill=%22%23d9a362%22 opacity=%220.2%22/></svg>'); background-size: cover; opacity: 0.5;"></div>
           <div class="position-relative w-100">
             <h2 class="modal-title fw-bold mb-2 text-center" style="color: var(--elegant-gold); text-shadow: 2px 2px 4px rgba(0,0,0,0.3); font-size: 2.8rem; letter-spacing: 3px;">🍞 PANADERÍA LA DESESPERANZA 🥐</h2>
-            <p class="text-center mb-0" style="color: #e0d4c3; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); letter-spacing: 2px;">HORNEANDO FELICIDAD DESDE 2020</p>
+            <p class="text-center mb-0" style="color: #e8dcc8; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); letter-spacing: 2px;">HORNEANDO FELICIDAD DESDE 2020</p>
           </div>
           <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
         </div>
@@ -824,7 +817,7 @@
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.642437058805!2d-99.1617437!3d19.4270202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92b2aa7c68f%3A0xdea9c33ec2d2a86f!2sPasteler%C3%ADa%20Ideal!5e0!3m2!1ses-419!2smx!4v1700000000000" 
                   width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
               </div>
-              <div class="p-4 rounded" style="background: linear-gradient(135deg, #faf8f3 0%, #f5f1e8 100%); border-left: 3px solid var(--elegant-gold);">
+              <div class="p-4 rounded" style="background: linear-gradient(135deg, #f5ebe0 0%, #e8dcc8 100%); border-left: 3px solid var(--elegant-gold);">
                 <p class="mb-2" style="color: var(--rich-brown); font-weight: 500;"><strong>🕐 HORARIO:</strong> <span style="font-weight: 300;">Lunes a Domingo, 6:00 AM - 8:00 PM</span></p>
                 <p class="mb-0" style="color: var(--rich-brown); font-weight: 500;"><strong>📞 TELÉFONO:</strong> <span style="font-weight: 300;">(55) 1234-5678</span></p>
               </div>
@@ -839,7 +832,6 @@
     </div>
   </div>
 
-  <!-- Modal Gestión de Usuarios -->
   <div class="modal fade" id="modalUsuarios" tabindex="-1">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
@@ -863,7 +855,7 @@
             </table>
           </div>
           <hr class="my-4">
-          <div class="p-4 rounded" style="background: linear-gradient(135deg, #faf8f3 0%, #f5f1e8 100%); border-left: 4px solid var(--elegant-gold);">
+          <div class="p-4 rounded" style="background: linear-gradient(135deg, #f5ebe0 0%, #e8dcc8 100%); border-left: 4px solid var(--elegant-gold);">
             <h6 class="fw-bold mb-4" style="color: var(--rich-brown); letter-spacing: 1px;"><i class="bi bi-person-plus-fill"></i> AGREGAR NUEVO USUARIO</h6>
             <form id="formNuevoUsuario" class="row g-3">
               <div class="col-md-4">
@@ -890,7 +882,6 @@
     </div>
   </div>
 
-  <!-- Modal Reset Password -->
   <div class="modal fade" id="modalReset" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -926,7 +917,6 @@
     </div>
   </div>
 
-  <!-- Contenedor de notificaciones -->
   <div id="toast-container" class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999;"></div>
 
   <footer class="text-white text-center py-5">
